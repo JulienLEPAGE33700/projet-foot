@@ -1,0 +1,105 @@
+/* Appliquer un fond vert à tout le document (html et body) */
+
+html, body {
+    height: 100%;
+    background-color: white !important;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Pour s'assurer qu'il n'y a pas de marge par défaut */
+    padding: 0; /* Pour éviter un espacement blanc autour de la page */
+}
+
+/* Bannière */
+.banner {
+    background-color: #007bff;  /* Couleur bleue pour la bannière */
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 5px; /* Coins arrondis pour la bannière */
+}
+
+
+.container {
+    background-color: #218838 !important;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Formulaire */
+.form-container {
+    background-color: #ffffff;  /* Fond blanc pour les formulaires */
+    padding: 20px;
+    border-radius: 8px;  /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    margin-bottom: 20px;
+}
+
+/* Label des champs de saisie */
+.form-label {
+    color: #333;  /* Couleur plus foncée pour les labels */
+    font-weight: 600;
+}
+
+/* Champs de saisie */
+.form-control {
+    border-color: #007bff;  /* Bordure bleue pour les champs */
+    border-radius: 5px;  /* Coins arrondis pour les champs */
+    background-color: #f8f9fa;  /* Fond léger pour les champs */
+}
+
+.form-control:focus {
+    border-color: #0056b3;  /* Bordure bleue plus foncée au focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Légère ombre bleue au focus */
+}
+
+/* Sélection de la Ligue et du type d'import */
+.select2-container .form-select {
+    font-size: 1rem;  /* Taille de police ajustée */
+}
+
+/* Boutons */
+.btn-primary {
+    background-color: #28a745; /* Couleur verte pour les boutons */
+    border-color: #218838;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+/* Message d'erreur/succès */
+#message {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+#message.success {
+    color: #28a745; /* Vert pour succès */
+}
+
+#message.error {
+    color: #dc3545; /* Rouge pour erreur */
+}
+
+/* Espacement des éléments */
+.mb-3 {
+    margin-bottom: 15px;
+}
+
+/* Pour le formulaire de période */
+#periodFields .col-md-6 {
+    padding-right: 10px; /* Espacement entre les champs */
+}
+
+/* Pour les messages dans les champs */
+select, input {
+    margin-bottom: 10px;
+}
+
+

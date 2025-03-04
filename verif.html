@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exécution du Code API</title>
+</head>
+<body>
+    <h1>Vérification de l'API Football</h1>
+    <button onclick="getMatchData()">Récupérer les matchs</button>
+
+    <script>
+        // Fonction pour récupérer les matchs
+        function getMatchData() {
+            fetch('https://api.football-data.org/v4/competitions/FL1/matches?status=SCHEDULED', {
+                method: 'GET',
+                headers: {
+                    'X-Auth-Token': 'c753fab793164e5291a698e3ac27a6aa' // Ta clé API
+                }
+            })
+            .then(response => {
+                // Vérifie si la limite des requêtes est atteinte
+                if (response.status === 429) {
+                    alert('Limite de requêtes atteinte, réessayez plus tard.');
+                    return;
+                }
+
+                // Si la réponse est correcte, vérifie les en-têtes
+                const remainingRequests = response.headers.get('X-RateLimit-Remaining');
+                const resetTime = response.headers.get('X-RateLimit-Reset');
+                console.log(`Requêtes restantes: ${remainingRequests}`);
+                console.log(`Réinitialisation prévue à : ${new Date(resetTime * 1000)}`);
+
+                // Si la réponse est bonne, traite les données
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);  // Affiche les données récupérées
+            })
+            .catch(error => console.log('Erreur lors de la récupération des matchs:', error));
+        }
+    </script>
+</body>
+</html>

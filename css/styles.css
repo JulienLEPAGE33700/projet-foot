@@ -1,0 +1,152 @@
+/* ========================= */
+/* 🔹 STYLES GÉNÉRAUX 🔹 */
+/* ========================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================= */
+/* 🔹 BANNIÈRE 🔹 */
+/* ========================= */
+
+.banner {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ========================= */
+/* 🔹 MISE EN PAGE PRINCIPALE 🔹 */
+/* ========================= */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.content {
+    display: flex;
+    height: 100vh;
+}
+
+/* ========================= */
+/* 🔹 SIDEBAR (MENU À GAUCHE) 🔹 */
+/* ========================= */
+
+.sidebar {
+    width: 25%;
+    max-width: 300px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ========================= */
+/* 🔹 BOUTONS 🔹 */
+/* ========================= */
+
+.button, .btn-primary {
+    font-size: 18px;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.button:hover, .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* ========================= */
+/* 🔹 CONTENU PRINCIPAL (IMAGES, FORMULAIRES) 🔹 */
+/* ========================= */
+
+.main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Pour que l'image s'adapte sans scroll */
+.main img {
+    max-width: 90%;
+    max-height: 80vh;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================= */
+/* 🔹 FORMULAIRES 🔹 */
+/* ========================= */
+
+.form-container {
+    text-align: center;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+select, input, button {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.form-select,
+.form-control {
+    display: inline-block;
+    width: auto;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* ========================= */
+/* 🔹 RESPONSIVE DESIGN 🔹 */
+/* ========================= */
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        max-width: none;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
